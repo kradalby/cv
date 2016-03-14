@@ -1,0 +1,28 @@
+build:
+    image: kradalby/ci-tox:latest
+    pull: true
+    commands:
+      - npm install -g resume-cli
+      - resume export --theme slick cv.html
+      - echo "Deploying"
+
+notify:
+  email:
+    from: drone@fap.no
+    host: smtp.stud.ntnu.no
+    port: 25
+    recipients:
+      - kradalby@kradalby.no
+
+deploy:
+  rsync:
+    user: www
+    host: onyx.fap.no
+    port: 22
+    source: cv.html
+    target: /usr/local/www/kradalby.no/pub/jobb/
+    delete: false
+    recursive: true
+    exclude:
+    commands:
+      - echo "Done"
