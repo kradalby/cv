@@ -2,8 +2,13 @@ build:
     image: kradalby/ci-tox:latest
     pull: true
     commands:
-      - npm install -g resume-cli
-      - resume export --theme slick cv.html
+      - apt-get install wkhtmltopdf
+      - npm install fluentcv -g
+      - npm install jsonresume-theme-slick
+      - fluentcv BUILD resume.json TO out/cv.all -t node_modules/jsonresume-theme-slick
+        # This is a hack...
+      - perl -pi -E 's/link href="http/link href="https/g' out/cv.html
+      - perl -pi -E "s/link href='http/link href='https/g" out/cv.html
       - echo "Deploying"
 
 notify:
@@ -19,7 +24,7 @@ deploy:
     user: www
     host: onyx.fap.no
     port: 22
-    source: cv.html
+    source: out/
     target: /usr/local/www/kradalby.no/pub/jobb/
     delete: false
     recursive: true
