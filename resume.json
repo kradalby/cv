@@ -77,7 +77,6 @@
         {
             "company": "Kavik AS",
             "position": "Office and logistics",
-            "website": "-",
             "startDate": "2011-09-01",
             "endDate": "2014-08-31",
             "summary": "Responsible for goods delivery, invoicing and computer systems.",
@@ -88,7 +87,6 @@
         {
             "company": "J & B Utstyr AS",
             "position": "Handyman",
-            "website": "-",
             "startDate": "2009-06-15",
             "endDate": "2011-08-15",
             "summary": "Summer job with a lot of different maintenance tasks.",
@@ -151,7 +149,6 @@
             "endDate": "2016-02-01",
             "summary": "Responsible for the technical aspects of the economics systems, and the finance of the system development and administration committee.",
             "highlights": [
-                ""
             ]
         },
         {
@@ -172,7 +169,6 @@
             "endDate": "2015-06-01",
             "summary": "Responsible for the economomy of the 2015 trip and the maintenance of techtalks.no",
             "highlights": [
-                ""
             ]
         },
         {
@@ -182,7 +178,6 @@
             "startDate": "2014-08-01",
             "summary": "Member of a small team building the network for 600+ users.",
             "highlights": [
-                ""
             ]
         }
     ],
@@ -192,7 +187,6 @@
             "area": "Informatics",
             "studyType": "Master",
             "startDate": "2015-08-12",
-            "gpa": "",
             "courses": [
             ]
         },
@@ -201,8 +195,6 @@
             "area": "Software Engineering",
             "studyType": "Exchange",
             "startDate": "2016-02-01",
-            "endDate": "2016-07-01",
-            "gpa": "",
             "courses": [
             ]
         },
@@ -212,7 +204,6 @@
             "studyType": "Bachelor",
             "startDate": "2012-08-12",
             "endDate": "2015-06-15",
-            "gpa": "",
             "courses": [
             ]
         },
@@ -222,7 +213,6 @@
             "studyType": "High school",
             "startDate": "2010-08-20",
             "endDate": "2011-06-15",
-            "gpa": "",
             "courses": [
             ]
         },
@@ -232,7 +222,6 @@
             "studyType": "High school",
             "startDate": "2009-08-20",
             "endDate": "2010-06-15",
-            "gpa": "",
             "courses": [
             ]
         },
@@ -242,7 +231,6 @@
             "studyType": "High school",
             "startDate": "2008-08-20",
             "endDate": "2009-06-15",
-            "gpa": "",
             "courses": [
             ]
         }
