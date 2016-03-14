@@ -2,7 +2,7 @@ build:
     image: kradalby/ci-tox:latest
     pull: true
     commands:
-      - apt-get install wkhtmltopdf
+      - apt-get install wkhtmltopdf -y --force-yes
       - npm install fluentcv -g
       - npm install jsonresume-theme-slick
       - fluentcv BUILD resume.json TO out/cv.all -t node_modules/jsonresume-theme-slick
