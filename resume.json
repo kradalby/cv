@@ -278,14 +278,13 @@
             "keywords": [
                 "Debian",
                 "FreeBSD",
+                "Shell scripting",
                 "XenServer",
                 "Vmware",
-                "Bash",
                 "Nginx",
                 "Apache",
                 "Samba",
-                "Jenkins/Drone",
-                "Python"
+                "Jenkins/Drone"
             ]
         },
         {
