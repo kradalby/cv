@@ -35,6 +35,16 @@
     },
     "work": [
         {
+            "company": "Knowit Objectnet",
+            "position": "Developer - Summer intern",
+            "website": "http://knowit.no",
+            "startDate": "2016-06-20",
+            "endDate": "",
+            "summary": "",
+            "highlights": [
+            ]
+        },
+        {
             "company": "Uninett Sigma2 AS",
             "position": "Developer - Summer intern",
             "website": "http://uninett.no",
