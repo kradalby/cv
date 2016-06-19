@@ -22,11 +22,11 @@ notify:
 
 deploy:
   rsync:
-    user: www
-    host: onyx.fap.no
+    user: root
+    host: seel.fap.no
     port: 22
     source: out/
-    target: /usr/local/www/kradalby.no/pub/jobb/
+    target: /srv/www/kradalby.no/pub/jobb/
     delete: false
     recursive: true
     exclude:
