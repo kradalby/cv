@@ -1,9 +1,8 @@
 build:
-    image: kradalby/ci-tox:latest
+    image: kradalby/ci-node-electron:latest
     pull: true
     commands:
       - apt-get update
-      - apt-get install node npm
       - apt-get install wkhtmltopdf -y --force-yes
       - npm install fluentcv -g
       - npm install jsonresume-theme-slick
