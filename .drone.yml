@@ -3,6 +3,7 @@ build:
     pull: true
     commands:
       - apt-get update
+      - apt-get install node npm
       - apt-get install wkhtmltopdf -y --force-yes
       - npm install fluentcv -g
       - npm install jsonresume-theme-slick
