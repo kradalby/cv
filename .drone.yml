@@ -26,11 +26,12 @@ deploy:
     host: seel.fap.no
     port: 22
     source: out/
-    target: /usr/local/www/kradalby.no/pub/jobb/
+    target: /usr/local/www/cv.kradalby.no/
     delete: false
     recursive: true
     exclude:
     when:
         branch: master
     commands:
+      - mv /usr/local/www/cv.kradalby.no/cv.html /usr/local/www/cv.kradalby.no/index.html
       - echo "Done"
