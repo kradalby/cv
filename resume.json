@@ -72,7 +72,7 @@
             "endDate": "2015-12-31",
             "summary": "Student assistant in the Network and Service Management course TTM4128. Responsibilities includes helping students and support the lecturer.",
             "highlights": [
-                "Held a practical presentation on the usage of Netconf: https://kradalby.no/p/ttm4128/netconf_2015"
+                "Held a practical presentation on the usage of Netconf: https://kradalby.no/presentations/ttm4128/netconf_2015"
             ]
         },
         {
@@ -168,7 +168,7 @@
             "startDate": "2012-08-31",
             "summary": "Responsible for building the network and maintaining the related services during LAN/Computer party events.",
             "highlights": [
-                "As a team of two people we built the network for 250+ participants."
+                "As a team of two people we build the network infrastructure for 250+ participants."
             ]
         },
         {
@@ -267,8 +267,7 @@
                 "Java",
                 "Javascript",
                 "Swift",
-                "Erlang",
-                "Go"
+                "Erlang"
             ]
         },
         {
