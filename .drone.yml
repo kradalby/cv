@@ -15,10 +15,12 @@ build:
 notify:
   email:
     from: drone@fap.no
-    host: smtp.stud.ntnu.no
+    host: mail.ntnu.fap.no
     port: 25
     recipients:
       - kradalby@kradalby.no
+    when:
+        branch: master
 
 deploy:
   rsync:
