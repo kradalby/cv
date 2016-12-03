@@ -292,8 +292,7 @@
                 "XenServer",
                 "Vmware",
                 "Nginx",
-                "Apache",
-                "Samba",
+                "Ansible",
                 "Jenkins/Drone"
             ]
         },
@@ -305,15 +304,6 @@
                 "Windows Server 2003",
                 "Active Directory",
                 "Print and file server"
-            ]
-        },
-        {
-            "name": "Email administration",
-            "level": "Basic knowledge",
-            "keywords": [
-                "Postfix",
-                "Exim4",
-                "Sympa"
             ]
         }
     ],
