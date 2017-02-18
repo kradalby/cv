@@ -16,7 +16,7 @@ pipeline:
   deploy:
     image: drillster/drone-rsync
     user: www
-    host: [ "seel.terra.fap.no" ]
+    hosts: [ "seel.terra.fap.no" ]
     port: 22
     source: out/
     target: /usr/local/www/cv.kradalby.no/
