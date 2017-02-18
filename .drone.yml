@@ -1,39 +1,40 @@
-build:
-    image: kradalby/ci-node-electron:latest
-    pull: true
-    commands:
-      - apt-get update
-      - apt-get install wkhtmltopdf -y --force-yes
-      - npm install fluentcv -g
-      - npm install jsonresume-theme-slick
-      - fluentcv BUILD resume.json TO out/cv.all -t node_modules/jsonresume-theme-slick
-        # This is a hack...
-      - perl -pi -E 's/link href="http/link href="https/g' out/cv.html
-      - perl -pi -E "s/link href='http/link href='https/g" out/cv.html
-      - echo "Deploying"
+pipeline:
+  build:
+      image: node:latest
+      pull: true
+      commands:
+        - apt-get update
+        - apt-get install wkhtmltopdf perl -y --force-yes
+        - npm install fluentcv -g
+        - npm install jsonresume-theme-slick
+        - fluentcv BUILD resume.json TO out/cv.all -t node_modules/jsonresume-theme-slick
+          # This is a hack...
+        - perl -pi -E 's/link href="http/link href="https/g' out/cv.html
+        - perl -pi -E "s/link href='http/link href='https/g" out/cv.html
+        - echo "Deploying"
 
-notify:
-  email:
-    from: drone@fap.no
+  deploy:
+    rsync:
+      image: drillster/drone-rsync
+      user: www
+      host: seel.terra.fap.no
+      port: 22
+      source: out/
+      target: /usr/local/www/cv.kradalby.no/
+      delete: false
+      recursive: true
+      exclude:
+      when:
+          branch: master
+      script:
+        - mv /usr/local/www/cv.kradalby.no/cv.html /usr/local/www/cv.kradalby.no/index.html
+        - echo "Done"
+
+  notify:
+    image: drillster/drone-email
     host: mail.ntnu.fap.no
     port: 25
-    recipients:
-      - kradalby@kradalby.no
+    from: drone@drone.fap.no
+    recipients: [ kradalby@kradalby.no ]
     when:
-        branch: master
-
-deploy:
-  rsync:
-    user: www
-    host: seel.terra.fap.no
-    port: 22
-    source: out/
-    target: /usr/local/www/cv.kradalby.no/
-    delete: false
-    recursive: true
-    exclude:
-    when:
-        branch: master
-    commands:
-      - mv /usr/local/www/cv.kradalby.no/cv.html /usr/local/www/cv.kradalby.no/index.html
-      - echo "Done"
+      status: [ success, changed, failure ]
