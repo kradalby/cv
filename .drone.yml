@@ -4,6 +4,19 @@ pipeline:
     repo: kradalby/cv
     auto_tag: true
     secrets: [ docker_username, docker_password ]
+    tags:
+        - ${DRONE_COMMIT_SHA:0:8}
+        - latest
+
+  deploy:
+    image: quay.io/honestbee/drone-kubernetes
+    deployment: cv-deployment
+    repo: kradalby/cv
+    container: cv-container
+    namespace: default
+    secrets: [ kubernetes_server, kubernetes_cert, kubernetes_token ]
+    tag:
+      - ${DRONE_COMMIT_SHA:0:8}
 
   notify:
     image: drillster/drone-email
